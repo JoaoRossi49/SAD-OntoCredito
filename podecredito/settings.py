@@ -25,12 +25,14 @@ SECRET_KEY = 'django-insecure-$4jr()0obo0%$f9zdoq5r$zot9w6%pkhx#ry+q)y9_5jx_qv_p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'creditcheck',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

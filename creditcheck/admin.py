@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+
+class ClienteAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'salario', 'nivel_escolar','quantidade_cartoes', 'dividas', 'saldo')
+
+admin.site.register(Cliente, ClienteAdmin)
