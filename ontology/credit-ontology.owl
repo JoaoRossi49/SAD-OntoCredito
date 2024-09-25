@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/"
+   xmlns:ns1="http://www.w3.org/2003/11/swrl#"
+   xmlns:ns2="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/dividas"/>
+    <ns1:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+    <ns1:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ns1:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db3"/>
+    <rdf:rest rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente"/>
+    <ns1:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/dividas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db1">
+    <ns2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns2:isRuleEnabled>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>S1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <ns1:body rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db2"/>
+    <ns1:head rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/CreditoAprovado"/>
+    <ns1:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/joao">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente"/>
+    <dividas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dividas>
+    <salario rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</salario>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/credito">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db5"/>
+    <rdf:rest rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db9"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db7"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/CreditoAprovado">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n72ff6af79de44cc09bc8bc39202cd00db5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/salario"/>
+    <ns1:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+    <ns1:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns1:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/salario">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

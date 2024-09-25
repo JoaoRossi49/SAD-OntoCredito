@@ -1,4 +1,4 @@
-from inferences import infer_credit_eligibility
+from inferences import verificar_credito_aprovado
 
 class Cliente:
     def __init__(self, nome, salario, nivel_escolar, quantidade_cartoes, dividas, saldo):
@@ -9,10 +9,10 @@ class Cliente:
         self.dividas = dividas
         self.saldo = saldo
 
-cliente = Cliente('João Rossi', 1400, '1', 2, 300,1000)
+cliente = Cliente('João Rossi', 10, '1', 2, 20,1000)
 
 
-temCredito = infer_credit_eligibility(cliente)
+temCredito = verificar_credito_aprovado(10, 20)
 
 if temCredito:
     print('O cliente é elegível para crédito')

@@ -1,0 +1,37 @@
+Prefix(:=<http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+
+
+Ontology(<http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit>
+
+Declaration(Class(:Cliente))
+Declaration(Class(:CreditoAprovado))
+Declaration(DataProperty(:credito))
+Declaration(DataProperty(:dividas))
+Declaration(DataProperty(:salario))
+Declaration(NamedIndividual(:joao))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :joao (:joao)
+
+ClassAssertion(:Cliente :joao)
+DataPropertyAssertion(:dividas :joao "20"^^xsd:integer)
+DataPropertyAssertion(:salario :joao "10"^^xsd:integer)
+
+
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "S1") Body(ClassAtom(:Cliente Variable(:x)) DataPropertyAtom(:salario Variable(:x) "10"^^xsd:integer) DataPropertyAtom(:dividas Variable(:x) "20"^^xsd:integer))Head(ClassAtom(:CreditoAprovado Variable(:x))))
+)

@@ -1,20 +1,23 @@
-from owlready2 import *
+from owlready2 import get_ontology, sync_reasoner_pellet
 
-onto = get_ontology("C:\git\podecredito-api\ontology\credit-ontology.rdf").load()
+# Carregar a ontologia
+onto = get_ontology("C:/git/podecredito-api/ontology/credit-ontology.owl").load()
 
-def infer_credit_eligibility(cliente):
-    with onto:
-        # Criar uma instância de cliente na ontologia
-        individuo_cliente = onto.Cliente()
-        individuo_cliente.temSalario = [cliente.salario]
-        individuo_cliente.temDividas = [cliente.dividas]
-        individuo_cliente.temSaldo = [cliente.saldo]
-        
-        # Regras ou classes definidas na ontologia serão inferidas automaticamente
-        sync_reasoner()
+# Acessar uma classe da ontologia (por exemplo, Cliente)
+Cliente = onto.Cliente
 
-        # Verificar se o cliente está em uma classe de aprovação de crédito
-        if individuo_cliente in onto.CréditoAprovado.instances():
-            return True
-        else:
-            return False
+# Criar um novo indivíduo da classe Cliente
+novo_cliente = Cliente("cliente1")
+
+# Definir propriedades para o novo indivíduo
+novo_cliente.salario.append(10)
+novo_cliente.dividas.append(20)
+
+# Rodar o raciocinador Pellet
+with sync_reasoner_pellet():
+    # Exibir classes inferidas para o indivíduo
+    print("Classes inferidas:", novo_cliente.is_a)
+
+    # Exibir propriedades inferidas
+    for prop in novo_cliente.get_properties():
+        print(f"{prop}: {novo_cliente[prop]}")

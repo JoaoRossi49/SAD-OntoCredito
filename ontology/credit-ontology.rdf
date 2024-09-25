@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/"
-     xml:base="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/"
+<rdf:RDF xmlns="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/"
+     xml:base="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,7 +9,7 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit"/>
     
 
 
@@ -33,47 +33,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#cartoes -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#cartoes"/>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#dividas -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#dividas"/>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#nivelEscolar -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#nivelEscolar"/>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#salario -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#salario"/>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#saldo -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#saldo"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -82,73 +41,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temDividas -->
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/credito -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temDividas">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#dividas"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/credito"/>
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temNivelEscolar -->
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/dividas -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temNivelEscolar">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#nivelEscolar"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/dividas"/>
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temQuantidadeCartoes -->
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/salario -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temQuantidadeCartoes">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#cartoes"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temSalario -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temSalario">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#salario"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temSaldo -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temSaldo">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#saldo"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/salario"/>
     
 
 
@@ -163,21 +70,36 @@
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente -->
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente"/>
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#CreditoAprovado -->
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/CreditoAprovado -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#CreditoAprovado"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/CreditoAprovado"/>
     
 
 
-    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#CreditoReprovado -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#CreditoReprovado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/joao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/joao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente"/>
+        <dividas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dividas>
+        <salario rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</salario>
+    </owl:NamedIndividual>
     
 
 
@@ -189,19 +111,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/c">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/sal">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/div">
+    <rdf:Description rdf:about="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>Se o salário for maior que 3000 e as dívidas menores que 1000</rdfs:comment>
-        <rdfs:label>Regra básica</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -209,8 +125,8 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#Cliente"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/c"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -219,9 +135,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temSalario"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/c"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/sal"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/salario"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</swrl:argument2>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -230,60 +146,12 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#temDividas"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/c"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/div"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/dividas"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</swrl:argument2>
                                     </rdf:Description>
                                 </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                                <swrl:arguments>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/sal"/>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </swrl:arguments>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                        <swrl:arguments>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/div"/>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </swrl:arguments>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                             </rdf:Description>
                         </rdf:rest>
                     </rdf:Description>
@@ -296,8 +164,8 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology#CreditoAprovado"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/credit-ontology/c"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/CreditoAprovado"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rossi/ontologies/2024/8/onto-credit/x"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
